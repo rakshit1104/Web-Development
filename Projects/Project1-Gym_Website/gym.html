@@ -7,10 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rakshit Gym</title>
     <style>
-        *{
+        * {
             margin: 0px;
             padding: 0px;
         }
+
         body {
             background-image: url(gymhome.jpg);
             background-size: 1430px;
@@ -21,16 +22,16 @@
             /* border: 2px solid red; */
             display: inline-block;
             margin: 20px 10px;
-            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             font-weight: 700;
         }
 
-        img{
+        img {
             display: block;
             margin-left: auto;
             margin-right: auto;
         }
-        
+
         #options {
             /* border: 2px solid red; */
             display: inline;
@@ -39,20 +40,20 @@
             margin: 25px 0px;
 
         }
-        
+
         #options li {
             display: inline;
             align-items: center;
             padding: 20px;
         }
 
-        #options li a{
+        #options li a {
             text-decoration: none;
             color: aliceblue;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             font-weight: 700;
         }
-        
+
         #search {
             /* border: 2px solid red; */
             display: inline;
@@ -62,16 +63,52 @@
 
         }
 
-        #searchbar{
+        #searchbar {
             border-radius: 5px;
             width: 200px;
             height: 30px;
             background-color: gainsboro;
         }
 
-        #containform{
-            border: 5px solid gainsboro;
-            
+        #containform {
+            box-sizing: border-box;
+            border: 3px solid gainsboro;
+            border-radius: 10px;
+            margin: 50px 450px;
+            padding: 50px 90px;
+            height: 330px;
+            width: 500px;
+        }
+
+        #containform h2 {
+            width: 300px;
+            text-align: center;
+        }
+
+        .form_type input {
+            margin: 4px;
+            border-radius: 10px;
+            height: 30px;
+            width: 300px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        .form_type button {
+            margin: 10px 70px;
+            width: 170px;
+            height: 30px;
+            border-radius: 5px;
+            background-color: beige;
+        }
+
+        .foot{
+            color: gainsboro;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-weight: 500;
+            text-align: center;
+            margin-top: 145px;
         }
 
     </style>
@@ -80,7 +117,7 @@
 <body>
     <header>
         <div id="photo">
-            <img src="logo.jpg" alt="Gym Logo" width="100px" >
+            <img src="logo.jpg" alt="Gym Logo" width="100px">
             <div>Rakshit Fitness</div>
         </div>
 
@@ -100,22 +137,31 @@
 
     <div id="containform">
         <h2>Best Gym in India!</h2>
-    <form action="node.php">
+        <form action="node.php">
 
-        <div class="form_type">
-            <input type="text" name="myName" id="name" placeholder="Enter your Name">
+            <div class="form_type">
+                <input type="text" name="myName" id="name" placeholder="Enter your Name">
+            </div>
+            <div class="form_type">
+                <input type="text" name="myAge" id="age" placeholder="Enter your Age">
+            </div>
+            <div class="form_type">
+                <input type="text" name="myGender" id="gender" placeholder="Enter your Gender">
+            </div>
+            <div class="form_type">
+                <input type="text" name="myLocality" id="locality" placeholder="Enter your Locality">
+                <div class="form_type">
+                    <button>Submit your response!</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <footer>
+        <div class="foot">
+            <hr>
+            <p>&#169 Rakshit Fitness Center</p>
         </div>
-        <div class="form_type">
-            <input type="text" name="myAge" id="age" placeholder="Enter your Age">
-        </div>
-        <div class="form_type">
-            <input type="text" name="myGender" id="gender" placeholder="Enter your Gender">
-        </div>
-        <div class="form_type">
-            <input type="text" name="myLocality" id="locality" placeholder="Enter your Locality">
-        </div>
-    </form>
-</div>
+    </footer>
 </body>
 
 </html>
