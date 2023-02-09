@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animations & Keyframes</title>
+    <style>
+        .para {
+            background-color: greenyellow;
+            /* width: 250px;
+            height: 250px; */
+        }
+
+        .para1 {
+            background-color: green;
+            width: 250px;
+            height: 100px;
+            animation-name: animate;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes animate {
+            from {
+                width: 200px;
+            }
+
+            to {
+                width: 1000px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="para">
+        <div class="para1"></div>
+    </div>
+</body>
+
+</html>
