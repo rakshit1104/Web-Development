@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Delivery on the go!</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        
+        /* Navigation Bar */
+        #navbar{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            position: sticky;
+            background-color: rgb(45, 43, 43);
+            opacity: 0.9;
+            
+        }
+
+        #photo{
+            margin-left: 30px;
+        }
+
+        .itembox ul{
+            display: flex;
+            flex-direction: row;
+            list-style: none;
+            /* margin-left: 50px; */
+        }
+
+        .itembox ul li{
+            padding: 0px 15px;
+        }
+
+        a{
+            text-decoration: none;
+            color: aliceblue;
+            font-family:sans-serif;
+            font-weight: 550;
+        }
+
+        /* Home */
+        #home{
+            background-image: url(dish.jpg);
+            font-family:Arial, Helvetica, sans-serif;
+            background-size:cover;
+            color: white;
+            height: 350px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .btn{
+            border: 2px solid grey;
+            background-color:azure;
+            font-family: cursive;
+            font-size: 18px;
+            height: 30px;
+            width: 150px;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav id="navbar">
+            <div id="photo">
+                <img src="logo.jpg" alt="logo here" height="40px">
+            </div>
+            <div class="itembox">
+                <ul>
+                    <li class="items"><a href="#">Home</a></li>
+                    <li class="items"><a href="#">Services</a></li>
+                    <li class="items"><a href="#">Our Clients</a></li>
+                    <li class="items"><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <body>
+        <div id="home">
+            <h1>Welcome to MyOnlineMeal Website</h1>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis dolorum numquam minus. </p>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. </p>
+            <button class="btn">Order Now</button>
+        </div>
+    </body>
+</body>
+</html>
