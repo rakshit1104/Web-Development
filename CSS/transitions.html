@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transitions</title>
+    <style>
+        body{
+            background-color: black;
+            color: aliceblue;
+        }
+
+        .box{
+            display: flex;
+            background-color: blueviolet;
+            border: 3px solid red;
+            border-radius: 10px;
+            margin: 50px;
+            height: 150px;
+            width: 200px;
+            justify-content: center;
+            align-items: center;
+            transition-property: all;
+            transition-duration: 1s;
+        }
+
+        .box:hover{
+            background-color:rgb(31, 79, 239);
+            height: 400px;
+            width: 400px;
+            border-radius: 30px;
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        This is transition tutorial!
+    </div>
+</body>
+</html>
