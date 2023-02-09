@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Tutorial</title>
+    <style>
+        .start{
+            border: 2px solid black;
+            height: 400px;
+            display: flex; /* dispaly:flex converts the element into a flexbox */
+
+            flex-flow: row wrap; /* flex-flow is used to set flex-direction and flex-wrap in one syntax i.e. flex-flow */
+
+            justify-content:center; /* justify-content will justify the content in horizontal direction */
+            
+            align-items: center; /* align-items will justify the content in vertical direction */
+        }
+
+        .item{
+            border: 2px solid black;
+            background-color: tomato;
+            height: 150px;
+            width: 150px;
+            margin: 10px;
+        }
+
+        #item1{
+
+            /* Flex properties for a flex item */
+
+            /* order: 2;  Higher the order, later it shows up in the container */
+
+            /* flex-grow: 2;  Higher the flex-grow for a particular element, the faster it grows */
+
+            /* flex-shrink: 2;  Higher the flex-shrink for a particular element, the faster it shrinks */
+
+        /*  When flex-direction is set to row flex-basis will control width
+            When flex-direction is set to coloum flex-basis will control height
+
+            flex-basis: 300px;  */
+
+            /* align-self:last baseline;  align-self align the particular selected item */
+        }
+
+    </style>
+</head>
+
+<body>
+    <h1>This is a Flexbox Tutorial</h1>
+    <div class="start">
+        <div class="item" id="item1">First Box</div>
+        <div class="item" id="item2">Second Box</div>
+        <div class="item" id="item3">Third Box</div>
+        <div class="item" id="item4">Fourth Box</div>
+        <div class="item" id="item5">Fifth Box</div>
+        <div class="item" id="item6">Sixth Box</div>
+    </div>
+</body>
+
+</html>
