@@ -1,0 +1,142 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+/* Navigation bar */
+#navbar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: sticky;
+    background-color: rgb(45, 43, 43);
+    opacity: 0.9;
+
+}
+
+#photo {
+    margin-left: 30px;
+}
+
+.itembox ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    /* margin-left: 50px; */
+}
+
+.itembox ul li {
+    padding: 0px 15px;
+}
+
+a {
+    text-decoration: none;
+    color: aliceblue;
+    font-family: sans-serif;
+    font-weight: 550;
+}
+
+a:hover {
+    padding: 1px;
+    color: black;
+    background-color: aliceblue;
+    border-radius: 3px;
+}
+
+/* Home section */
+#home {
+    background-image: url(dish.jpg);
+    font-family: Arial, Helvetica, sans-serif;
+    background-size: cover;
+    color: white;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn {
+    border: 2px solid grey;
+    background-color: azure;
+    font-family: cursive;
+    font-size: 18px;
+    height: 30px;
+    width: 150px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+
+/* Our services */
+#heading {
+    text-align: center;
+    font-family: cursive;
+    margin: 20px 0px;
+}
+
+.services {
+    /* border: 2px solid red; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.services .box img {
+    height: 100px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+.box {
+    width: 300px;
+    padding: 10px;
+    font-family: 'Bree Serif', serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    text-align: center;
+    background-color: blanchedalmond;
+    border: 3px solid red;
+    border-radius: 20px;
+}
+
+/* Contact Us */
+.contactform {
+    background-image: url(contact.jpg);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contactform form {
+    padding: 20px;
+}
+
+.form input {
+    width: 500px;
+    height: 30px;
+    background-color: antiquewhite;
+    border-color: black;
+    border-radius: 5px;
+}
+
+.contactform button {
+    margin: 10px 200px;
+    width: 100px;
+    height: 25px;
+    border-radius: 5px;
+}
+
+/* Footer */
+.foot {
+    background-color: black;
+    color: gainsboro;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
+    text-align: center;
+}
