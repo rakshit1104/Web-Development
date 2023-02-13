@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loops</title>
+    <script>
+
+        let friends = ["a", "b", "c", "d", "e"];
+
+        // For Loop
+        for (let index = 0; index < friends.length; index++) {
+            console.log(friends[index]);
+        }
+
+        // ForEach Loop
+        friends.forEach(function f(element) {
+            console.log("Hello Friends, " + element)
+        });
+
+        // ForOf Loop (Modern JavaScript)
+        for (element of friends) {
+            console.log(element + " to modern JS!");
+        }
+
+        // ForIn Loop
+        let employee = {
+            name: "Rakshit",
+            salary: 2,
+            id: 1,
+        }
+        for (key in employee) {
+            console.log(`The ${key} of employee is ${employee[key]}`);
+        }
+
+        // While Loop
+        let j = 0;
+        while (j < 4) {
+            console.log(j);
+            j++;
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
