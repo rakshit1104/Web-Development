@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulating DOM</title>
+    
+</head>
+<body>
+    <div id="main" class="container">
+        <ul id="nav">
+            <li>Home</li>
+            <li>About</li>
+            <li>Services</li>
+            <li>About Us</li>
+            <li id="li4">Contact Us</li>
+        </ul>
+    </div>
+    <script>
+        // Select element by ID
+        let navigate = document.getElementById('main');
+        console.log(navigate);
+
+        // Select element by class
+        let show = document.getElementsByClassName('container');
+        console.log(show);
+
+        // Select element by css class name
+        let hello = document.querySelector('.container');
+        console.log(hello);
+
+        // Select element by css class name
+        let hello1 = document.querySelector('#main');
+        console.log(hello1);
+
+        // Change inside the HTML
+        document.querySelector('#li4').innerHTML = "Do not disturb";
+        console.log(navigate);
+    </script>
+</body>
+</html>
