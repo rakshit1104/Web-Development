@@ -19,10 +19,11 @@
         let myJsonStr = JSON.stringify(jsonObj); // stringify converts valid JS Object into a String
         console.log(myJsonStr);
 
-        // Replace inside the JSON
-        myJsonStr = myJsonStr.replace('Rakshit', 'Rakshit Pandey');
+
+        myJsonStr = myJsonStr.replace('Rakshit', 'Rakshit Pandey'); // replace inside the JSON
         console.log(myJsonStr);
 
+        
         newJsonObj = JSON.parse(myJsonStr); // parse converts a JSON String into a JSON Object
         console.log(newJsonObj);
     </script>
