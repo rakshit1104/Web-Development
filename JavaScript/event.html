@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Events</title>
+    <style>
+        #btn1 {
+            height: 50px;
+            width: 100px;
+            background-color: rgb(109, 158, 201);
+            border: 3px solid blue;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #btn2 {
+            margin-left: 30px;
+            height: 50px;
+            width: 100px;
+            background-color: rgb(196, 142, 142);
+            border: 3px solid red;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h2>Let's learn about JS Events</h2>
+        <p id="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, quos quisquam vel rem tenetur
+            iusto voluptate omnis facere quis molestias quasi nobis. Sed voluptatibus commodi saepe cumque cum
+            necessitatibus neque beatae eum expedita, tempore velit fuga tenetur ab quas nam culpa aliquid quae quidem
+            porro atque. Ipsa nostrum blanditiis voluptate! Lorem ipsum dolor sit amet consectetur adipisicing elit. Et
+            veritatis a doloribus voluptatem? Obcaecati eius ad recusandae voluptatibus magnam laborum corporis hic
+            suscipit, rerum debitis nesciunt reprehenderit. Laboriosam doloremque aspernatur itaque illum error natus
+            repudiandae hic eius illo fugiat ratione accusamus dolorem veniam omnis aut dolores similique, ipsa quis
+            earum quod? Sequi, quia excepturi ullam saepe aliquam recusandae culpa illum ipsum, quae voluptatum ad
+            velit, fugit aliquid hic ab soluta qui nulla itaque perferendis voluptatem totam. Nesciunt tenetur nisi
+            minus veritatis unde soluta sapiente repellendus obcaecati quasi quod quo alias voluptatem sunt ullam
+            corrupti sequi maxime eius, dolorum blanditiis ab.</p>
+    </div>
+    <button id="btn1">Click here to show/hide</button>
+    <button id="btn2">Click here to print</button>
+
+    <script>
+        let para = document.getElementById("para");
+        let btn1 = document.getElementById("btn1");
+        let btn2 = document.getElementById("btn2");
+        
+
+        btn1.addEventListener("click", myFunction);
+        function myFunction() {
+            if (para.style.display != 'none') {
+                para.style.display = 'none';
+            } else {
+                para.style.display = 'block';
+            }
+        }
+
+
+        btn2.addEventListener("click", myCall);
+        function myCall() {
+            alert("Hello User!")
+        }
+    </script>
+</body>
+
+</html>
