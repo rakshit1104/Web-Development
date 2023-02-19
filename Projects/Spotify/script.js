@@ -30,6 +30,7 @@ mainPlayButton.addEventListener('click', () => {
         audioElement.play();
         mainPlayButton.classList.remove('fa-play-circle');
         mainPlayButton.classList.add('fa-pause-circle');
+
     } else {
         audioElement.pause();
         mainPlayButton.classList.remove('fa-pause-circle');
@@ -50,19 +51,9 @@ progressBar.addEventListener('change', ()=>{
     audioElement.currentTime = ((progressBar.value * audioElement.duration) / 100);
 })
 
-const makeAllPlay = () =>{
-    Array.from(songPlayButton).forEach((element) =>{
-        element.classList.remove('fa-pause-circle');
-        element.classList.add('fa-play-circle');
-    })
-}
-
 Array.from(songPlayButton).forEach((element)=>{
     element.addEventListener('click', (e)=>{
-        makeAllPlay();
         songIndex = parseInt(e.target.id);
-        e.target.classList.remove('fa-play-circle');
-        e.target.classList.add('fa-pause-circle');
         audioElement.src = `songs/${songIndex}.mp3`;
         audioElement.currentTime = 0;
         audioElement.play();

@@ -28,6 +28,11 @@ body {
     padding: 0 15px;
 }
 
+.navbar li a {
+    text-decoration: none;
+    color: white;
+}
+
 #picture {
     font-weight: bolder;
     font-size: 23px;
@@ -98,4 +103,16 @@ body {
 
 .icons i {
     cursor: pointer;
+}
+
+/* About Page */
+.aboutmain {
+    display: flex;
+    flex-direction: column;
+    padding-top: 150px;
+}
+
+.aboutcontent {
+    align-self: center;
+    text-align: center;
 }
