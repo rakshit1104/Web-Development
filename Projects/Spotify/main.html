@@ -24,63 +24,63 @@
 
     <!-- Songs List -->
     <div class="songList">
-        <div class="songItem" id="song1">
+        <div class="songItem" >
             <img src="covers/1.jpg" alt="">
-            <i id="Bplayutton" class="fa-solid fa-circle-play fa-2xl"></i>
+            <i id="1" class="songPlayButton fa-solid fa-circle-play fa-2xl"></i>
             <br>
             <h4>Let Me Love You</h4>
         </div>
-        <div class="songItem" id="song2">
+        <div class="songItem" >
             <img src="covers/2.jpg" alt="">
-            <i id="playButton" class="fa-solid fa-circle-play fa-2xl"></i>
+            <i id="2" class="songPlayButton fa-solid fa-circle-play fa-2xl"></i>
             <br>
             <h4>Perfect</h4>
         </div>
-        <div class="songItem" id="song3">
+        <div class="songItem" >
             <img src="covers/3.jpg" alt="">
-            <i id="playButton" class="fa-solid fa-circle-play fa-2xl"></i>
+            <i id="3" class="songPlayButton fa-solid fa-circle-play fa-2xl"></i>
             <br>
             <h4>Locked Away</h4>
         </div>
     </div>
 
     <div class="songList">
-        <div class="songItem" id="song4">
+        <div class="songItem" >
             <img src="covers/4.jpg" alt="">
-            <i id="playButton" class="fa-solid fa-circle-play fa-2xl"></i>
+            <i id="4" class="songPlayButton fa-solid fa-circle-play fa-2xl"></i>
             <br>
             <h4>Story Of My Life</h4>
         </div>
-        <div class="songItem" id="song5">
+        <div class="songItem" >
             <img src="covers/5.jpg" alt="">
-            <i id="playButton" class="fa-solid fa-circle-play fa-2xl"></i>
+            <i id="5" class="songPlayButton fa-solid fa-circle-play fa-2xl"></i>
             <br>
             <h4>Night Changes</h4>
         </div>
-        <div class="songItem" id="song6">
+        <div class="songItem" >
             <img src="covers/6.jpg" alt="">
-            <i id="playButton" class="fa-solid fa-circle-play fa-2xl"></i>
+            <i id="6" class="songPlayButton fa-solid fa-circle-play fa-2xl"></i>
             <br>
             <h4>I Like Me Better</h4>
         </div>
     </div>
 
     <div class="songList">
-        <div class="songItem" id="song7">
+        <div class="songItem" >
             <img src="covers/7.jpg" alt="">
-            <i id="playButton" class="fa-solid fa-circle-play fa-2xl"></i>
+            <i id="7" class="songPlayButton fa-solid fa-circle-play fa-2xl"></i>
             <br>
             <h4>Soocha Na Tha</h4>
         </div>
-        <div class="songItem" id="song8">
+        <div class="songItem" >
             <img src="covers/8.jpg" alt="">
-            <i id="playButton" class="fa-solid fa-circle-play fa-2xl"></i>
+            <i id="8" class="songPlayButton fa-solid fa-circle-play fa-2xl"></i>
             <br>
             <h4>Maan Meri Jaan</h4>
         </div>
-        <div class="songItem" id="song9">
+        <div class="songItem" >
             <img src="covers/9.jpg" alt="">
-            <i id="playButton" class="fa-solid fa-circle-play fa-2xl"></i>
+            <i id="9" class="songPlayButton fa-solid fa-circle-play fa-2xl"></i>
             <br>
             <h4>Tu Hi Das De</h4>
         </div>
@@ -88,15 +88,15 @@
 
     <!-- Bottom Bar -->
     <div class="bottom">
-        <input type="range" name="range" id="progressBar" min="0" max="100">
+        <input type="range" name="range" id="progressBar" value="0" min="0" max="100">
 
         <div class="icons">
-            <i class="fa-solid fa-backward fa-2xl"></i>
+            <i id="previous" class="fa-solid fa-backward fa-2xl"></i>
             <i id="mainPlayButton" class="fa-solid fa-circle-play fa-2xl"></i>
-            <i class="fa-solid fa-forward fa-2xl"></i>
+            <i id="next" class="fa-solid fa-forward fa-2xl"></i>
         </div>
 
-        <div class="currentSong">Let Me Love You</div>
+        <div id="currentSong">Let Me Love You</div>
     </div>
     <script src="script.js"></script>
 </body>

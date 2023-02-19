@@ -5,9 +5,13 @@ let songIndex = 0;
 let audioElement = new Audio('songs/1.mp3');
 let mainPlayButton = document.getElementById('mainPlayButton');
 let progressBar = document.getElementById('progressBar');
+let songPlayButton = document.getElementsByClassName('songPlayButton');
+let currentSong = document.getElementById('currentSong');
+let previous = document.getElementById('previous');
+let next = document.getElementById('next');
 
 
-// Songs array
+// Songs Array
 let songs = [
     { songName: "Let Me Love You", filePath: "songs/1.mp3", coverPath: "covers/1.jpg" },
     { songName: "Perfect", filePath: "songs/2.mp3", coverPath: "covers/2.jpg" },
@@ -20,7 +24,7 @@ let songs = [
     { songName: "Tu Hi Das De", filePath: "songs/9.mp3", coverPath: "covers/9.jpg" },
 ]
 
-// play/pause button
+// Play/pause Button
 mainPlayButton.addEventListener('click', () => {
     if (audioElement.paused || audioElement.currentTime <= 0) {
         audioElement.play();
@@ -31,4 +35,67 @@ mainPlayButton.addEventListener('click', () => {
         mainPlayButton.classList.remove('fa-pause-circle');
         mainPlayButton.classList.add('fa-play-circle');
     }
+})
+
+// Progress Bar
+audioElement.addEventListener('timeupdate', ()=>{
+
+    //Update the seekbar along with the song
+    progress = ((audioElement.currentTime/audioElement.duration) * 100); //This will convert the current time of playing into percentage and then it will keep updating the seekbar accordingly.
+    progressBar.value = progress;
+})
+
+// Change the part of the song according to the seekbar
+progressBar.addEventListener('change', ()=>{
+    audioElement.currentTime = ((progressBar.value * audioElement.duration) / 100);
+})
+
+const makeAllPlay = () =>{
+    Array.from(songPlayButton).forEach((element) =>{
+        element.classList.remove('fa-pause-circle');
+        element.classList.add('fa-play-circle');
+    })
+}
+
+Array.from(songPlayButton).forEach((element)=>{
+    element.addEventListener('click', (e)=>{
+        makeAllPlay();
+        songIndex = parseInt(e.target.id);
+        e.target.classList.remove('fa-play-circle');
+        e.target.classList.add('fa-pause-circle');
+        audioElement.src = `songs/${songIndex}.mp3`;
+        audioElement.currentTime = 0;
+        audioElement.play();
+        currentSong.innerText = songs[songIndex - 1].songName;
+        mainPlayButton.classList.remove('fa-play-circle');
+        mainPlayButton.classList.add('fa-pause-circle');
+    })
+})
+
+next.addEventListener('click', ()=>{
+    if (songIndex>=9) {
+        songIndex = 1;
+    } else {
+        songIndex += 1;
+    }
+    audioElement.src = `songs/${songIndex}.mp3`;
+    audioElement.currentTime = 0;
+    audioElement.play();
+    currentSong.innerText = songs[songIndex - 1].songName;
+    mainPlayButton.classList.remove('fa-play-circle');
+    mainPlayButton.classList.add('fa-pause-circle');
+})
+
+previous.addEventListener('click', ()=>{
+    if (songIndex<=0) {
+        songIndex = 1;
+    } else {
+        songIndex -= 1;
+    }
+    audioElement.src = `songs/${songIndex}.mp3`;
+    audioElement.currentTime = 0;
+    audioElement.play();
+    currentSong.innerText = songs[songIndex - 1].songName;
+    mainPlayButton.classList.remove('fa-play-circle');
+    mainPlayButton.classList.add('fa-pause-circle');
 })

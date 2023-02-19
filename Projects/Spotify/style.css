@@ -70,7 +70,7 @@ body {
     margin-bottom: 25px;
 }
 
-#playButton {
+.songPlayButton {
     cursor: pointer;
 }
 
