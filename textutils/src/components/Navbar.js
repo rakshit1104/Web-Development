@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 export default function Navbar(props) {
   return (
@@ -25,4 +26,16 @@ export default function Navbar(props) {
   </div>
 </nav>
   )
+}
+
+// Setting PropType ensures that the same type of prop gets passed in the field. isRequired tells us to to give the input in prop if no input is given in the prop
+Navbar.propTypes = {
+    title: PropTypes.string.isRequired,
+    aboutTitle: PropTypes.string.isRequired
+}
+
+// defaultProp sets these values in the prop if user does not give any input in the prop
+Navbar.defaultProps = {
+    title: "Set title here",
+    aboutTitle: "Set about here"
 }
