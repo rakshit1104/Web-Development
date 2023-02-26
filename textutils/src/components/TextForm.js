@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-export default function TextForm(prop) {
+export default function TextForm(props) {
     const [text, setText] = useState("Enter text here");
 
     const handleOnChange = (event) => {
@@ -21,19 +21,27 @@ export default function TextForm(prop) {
         let clearText = "";
         setText(clearText);
     }
+
+    const copyTextOnClick = () => {
+        let copyText = document.getElementById("myBox");
+        copyText.select();
+        navigator.clipboard.writeText(copyText.value);
+    }
     return (
         <>
             <div>
                 <div className="container">
-                    <h1>{prop.heading}</h1>
-                    <textarea className="form-control" value={text} onChange={handleOnChange} id="myBox" rows="8"></textarea>
+                    <h1 className={`text-${props.mode == 'light' ? 'dark' : 'light'}`}>{props.heading}</h1>
+
+                    <textarea className="form-control" value={text} onChange={handleOnChange} style={{ backgroundColor: props.mode == 'dark' ? '#2b3035' : 'white', color: props.mode == 'dark' ? 'white' : 'black', border: props.mode == 'dark' ? '3px solid white' : '3px solid black' }} id="myBox" rows="8"></textarea>
                 </div>
                 <div className="container my-2">
                     <button className="btn btn-primary" onClick={upperCaseOnClick}>Convert to Uppercase</button>
                     <button className="btn btn-primary mx-1" onClick={lowerCaseOnClick}>Convert to Lowercase</button>
                     <button className="btn btn-primary" onClick={clearTextOnClick}>Clear Text</button>
+                    <button className="btn btn-primary mx-1" onClick={copyTextOnClick}>Copy Text</button>
                 </div>
-                <div className="container">
+                <div className={`container text-${props.mode == 'light' ? 'dark' : 'light'}`}>
                     <h3>Your text summary</h3>
                     <p>Characters: {text.length}</p>
                     <p>Words: {text.split(" ").length}</p>
