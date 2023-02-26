@@ -10,22 +10,26 @@ export default function TextForm(props) {
     const upperCaseOnClick = () => {
         let upperCase = text.toUpperCase();
         setText(upperCase);
+        props.showAlert("Sucess", "Converted to Upper Case");
     }
 
     const lowerCaseOnClick = () => {
         let lowerCase = text.toLowerCase();
         setText(lowerCase);
+        props.showAlert("Sucess", "Converted to Lower Case");
     }
 
     const clearTextOnClick = () => {
         let clearText = "";
         setText(clearText);
+        props.showAlert("Sucess", "Text Cleared");
     }
 
     const copyTextOnClick = () => {
         let copyText = document.getElementById("myBox");
         copyText.select();
         navigator.clipboard.writeText(copyText.value);
+        props.showAlert("Sucess", "Copied to Clipboard");
     }
     return (
         <>
