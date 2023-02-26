@@ -12,24 +12,29 @@ export default function TextForm(prop) {
         setText(upperCase);
     }
 
-    const LowerCaseOnClick = () => {
+    const lowerCaseOnClick = () => {
         let lowerCase = text.toLowerCase();
         setText(lowerCase);
+    }
+
+    const clearTextOnClick = () => {
+        let clearText = "";
+        setText(clearText);
     }
     return (
         <>
             <div>
                 <div className="container">
                     <h1>{prop.heading}</h1>
-                    <label htmlFor="myBox" className="form-label"></label>
                     <textarea className="form-control" value={text} onChange={handleOnChange} id="myBox" rows="8"></textarea>
                 </div>
                 <div className="container my-2">
-                <button className="btn btn-primary" onClick={upperCaseOnClick}>Convert to Uppercase</button>
-                <button className="btn btn-primary mx-1" onClick={LowerCaseOnClick}>Convert to Lowercase</button>
+                    <button className="btn btn-primary" onClick={upperCaseOnClick}>Convert to Uppercase</button>
+                    <button className="btn btn-primary mx-1" onClick={lowerCaseOnClick}>Convert to Lowercase</button>
+                    <button className="btn btn-primary" onClick={clearTextOnClick}>Clear Text</button>
                 </div>
                 <div className="container">
-                    <h1>Your text summary</h1>
+                    <h3>Your text summary</h3>
                     <p>Characters: {text.length}</p>
                     <p>Words: {text.split(" ").length}</p>
                     <p>This can be read in: {0.008 * text.split(" ").length} minutes</p>
