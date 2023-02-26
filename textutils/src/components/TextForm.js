@@ -7,7 +7,7 @@ export default function TextForm(prop) {
         setText(event.target.value);
     }
 
-    const handleOnClick = () => {
+    const upperCaseOnClick = () => {
         let upperCase = text.toUpperCase();
         setText(upperCase);
     }
@@ -18,7 +18,7 @@ export default function TextForm(prop) {
                 <label htmlFor="myBox" className="form-label"></label>
                 <textarea className="form-control" value={text} onChange={handleOnChange} id="myBox" rows="8"></textarea>
             </div>
-            <button className="btn btn-primary" onClick={handleOnClick}>Convert to Uppercase</button>
+            <button className="btn btn-primary" onClick={upperCaseOnClick}>Convert to Uppercase</button>
         </div>
     )
 }
