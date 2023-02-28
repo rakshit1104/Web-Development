@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 
 export default function TextForm(props) {
-    const [text, setText] = useState("Enter text here");
+    const [text, setText] = useState("");
 
     const handleOnChange = (event) => {
         setText(event.target.value);
@@ -35,7 +35,7 @@ export default function TextForm(props) {
                 <div className="container">
                     <h1 className={`text-${props.mode === 'light' ? 'dark' : 'light'}`}>{props.heading}</h1>
 
-                    <textarea className="form-control" value={text} onChange={handleOnChange} style={{ backgroundColor: props.mode === 'dark' ? '#2b3035' : 'white', color: props.mode === 'dark' ? 'white' : 'black', border: props.mode === 'dark' ? '3px solid white' : '3px solid black' }} id="myBox" rows="8"></textarea>
+                    <textarea className="form-control" value={text} onChange={handleOnChange} style={{ backgroundColor: props.mode === 'dark' ? '#2b3035' : 'white', color: props.mode === 'dark' ? 'white' : 'black', border: props.mode === 'dark' ? '3px solid white' : '3px solid black' }} placeholder="Enter text here" id="myBox" rows="8"></textarea>
                 </div>
                 <div className="container my-2">
                     <button disabled={text.length === 0} className="btn btn-primary mx-1 my-1" onClick={upperCaseOnClick}>Convert to Uppercase</button>
