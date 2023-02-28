@@ -26,11 +26,8 @@ export default function TextForm(props) {
     }
 
     const copyTextOnClick = () => {
-        let copyText = document.getElementById("myBox");
-        copyText.select();
-        navigator.clipboard.writeText(copyText.value);
+        navigator.clipboard.writeText(text);
         props.showAlert("Sucess", "Copied to Clipboard");
-        document.getSelection().removeAllRanges();
     }
     return (
         <>
@@ -49,7 +46,7 @@ export default function TextForm(props) {
                 <div className={`container text-${props.mode === 'light' ? 'dark' : 'light'}`}>
                     <h3>Your text summary</h3>
                     <p>Characters: {text.length}</p>
-                    <p>Words: {text.split(" ").filter((element)=>{return element.length !== 0}).length}</p>
+                    <p>Words: {text.split(/\s+/).filter((element)=>{return element.length !== 0}).length}</p>
                     <p>This can be read in: {0.008 * text.split(" ").length} minutes</p>
                 </div>
             </div>
