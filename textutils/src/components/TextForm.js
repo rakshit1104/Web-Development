@@ -35,9 +35,9 @@ export default function TextForm(props) {
         <>
             <div>
                 <div className="container">
-                    <h1 className={`text-${props.mode == 'light' ? 'dark' : 'light'}`}>{props.heading}</h1>
+                    <h1 className={`text-${props.mode === 'light' ? 'dark' : 'light'}`}>{props.heading}</h1>
 
-                    <textarea className="form-control" value={text} onChange={handleOnChange} style={{ backgroundColor: props.mode == 'dark' ? '#2b3035' : 'white', color: props.mode == 'dark' ? 'white' : 'black', border: props.mode == 'dark' ? '3px solid white' : '3px solid black' }} id="myBox" rows="8"></textarea>
+                    <textarea className="form-control" value={text} onChange={handleOnChange} style={{ backgroundColor: props.mode === 'dark' ? '#2b3035' : 'white', color: props.mode === 'dark' ? 'white' : 'black', border: props.mode === 'dark' ? '3px solid white' : '3px solid black' }} id="myBox" rows="8"></textarea>
                 </div>
                 <div className="container my-2">
                     <button className="btn btn-primary" onClick={upperCaseOnClick}>Convert to Uppercase</button>
@@ -45,7 +45,7 @@ export default function TextForm(props) {
                     <button className="btn btn-primary" onClick={clearTextOnClick}>Clear Text</button>
                     <button className="btn btn-primary mx-1" onClick={copyTextOnClick}>Copy Text</button>
                 </div>
-                <div className={`container text-${props.mode == 'light' ? 'dark' : 'light'}`}>
+                <div className={`container text-${props.mode === 'light' ? 'dark' : 'light'}`}>
                     <h3>Your text summary</h3>
                     <p>Characters: {text.length}</p>
                     <p>Words: {text.split(" ").length}</p>
