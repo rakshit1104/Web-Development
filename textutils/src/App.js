@@ -31,9 +31,6 @@ function App() {
       document.body.style.backgroundColor = "#2b3035";
       showAlert("Sucess", "Dark Mode Enabled");
       document.title = 'TextUtils - Dark Mode';
-      // setInterval(() => {
-      //   document.title = 'TextUtils is Amazing!';
-      // }, 1500);
     } else {
       setMode('light');
       document.body.style.backgroundColor = "white";
@@ -45,16 +42,16 @@ function App() {
   return (
     <>
       <BrowserRouter>
-      <Navbar title="TextUtils" aboutTitle="About" mode={mode} toggleMode={toggleMode} />
-      <Alert alert={alert} />
-      <div className="container my-3">
-      <Routes>
-        <Route path="/" element={<TextForm heading="Enter the text to analyse" mode={mode} showAlert={showAlert} />} />
-        <Route path="/about" element={<About mode={mode} />}>
-        </Route>
-      </Routes>
-      </div>
-    </BrowserRouter>
+        <Navbar title="TextUtils" aboutTitle="About" mode={mode} toggleMode={toggleMode} />
+        <Alert alert={alert} />
+        <div className="container my-3">
+          <Routes>
+            <Route path="/" element={<TextForm heading="Enter the text to analyse" mode={mode} showAlert={showAlert} />} />
+            <Route path="/about" element={<About mode={mode} />}>
+            </Route>
+          </Routes>
+        </div>
+      </BrowserRouter>
     </>
   );
 }
