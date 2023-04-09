@@ -34,7 +34,6 @@ export default function TextForm(props) {
             <div>
                 <div className="container">
                     <h1 className={`text-${props.mode === 'light' ? 'dark' : 'light'}`}>{props.heading}</h1>
-
                     <textarea className="form-control" value={text} onChange={handleOnChange} style={{ backgroundColor: props.mode === 'dark' ? '#2b3035' : 'white', color: props.mode === 'dark' ? 'white' : 'black', border: props.mode === 'dark' ? '3px solid white' : '3px solid black' }} placeholder="Enter text here" id="myBox" rows="8"></textarea>
                 </div>
                 <div className="container my-2">
